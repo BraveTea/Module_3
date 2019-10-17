@@ -1,0 +1,28 @@
+
+20191017
+// Next time I am working on processing: 
+	- Continue working on the 				ModuleOpgave_3_robotje
+	
+	- Start by working on your pseudo code, and if that is satisfactory (which it probably is) start by looking into arrays in Processing. 
+    I am guessing that will be your best bet for moving forward.
+
+
+	- I wrote drawGrid() in order to help me visualise the playing area, and have done so using a nested for-loop. 
+  The advantage of this is that I can use the nested loop to create coordinates and put them in arrays (I think) 
+  (Think about the dice roller on Arduino). 
+  Then I can just have the robot move like 
+    Oh you are in pos_arr[0][0] and you press on the arrow key to the right, 
+    okay arrow right means up the column by 1 so now you are at pos_arr[0][1], 
+    
+    you press the arrow down key? Good, now I will increase the row by 1 so you are at pos_arr[1][1]
+
+This will also make it easy to not have the robot to out of bounds, because I can simply say, 
+  don't go beyond any 9 either in row or in col (so [0][9] is a maximum)
+I am not really sure though if that is easier than just saying you are not 
+  allowed to move past the width of the screen or the height, but it feels a lot simpler to do it in the arrays.
+
+	- I can also choose to go with the simple option where I just use the scale of the robot (square == width/10 or height/10) and have it move always the same steps as he is big (so width/10)
+	
+// For ModuleOpgave 3 (robotje)
+* See keyCode, keyTyped(), 
+
