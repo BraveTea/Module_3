@@ -11,7 +11,7 @@ final int arraySize= 10;
 int[] coorRobot = new int[2];
 int[] coorPayload = new int[2];
 
-boolean shiftToggle = true;
+boolean shiftToggle = false;
 
 void settings() {
   size(size, size); //by using settings you can appoint a variable to size
@@ -70,7 +70,7 @@ void keyPressed() {
         shiftToggle = !shiftToggle;
       }
     }
-    if (shiftToggle == false) {
+    if (shiftToggle == true) {
       if (keyCode == RIGHT) {
         coorPayload[0] += 50;
       } else if (keyCode == LEFT) {
