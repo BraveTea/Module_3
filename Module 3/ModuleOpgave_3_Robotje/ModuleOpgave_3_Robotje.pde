@@ -11,7 +11,7 @@ final int arraySize= 10;
 int[] coorRobot = new int[2];
 int[] coorPayload = new int[2];
 
-boolean shiftCount = true;
+boolean shiftToggle = true;
 
 void settings() {
   size(size, size); //by using settings you can appoint a variable to size
@@ -67,10 +67,10 @@ void keyPressed() {
 
     if (keyCode == SHIFT) {
       if (coorRobot[0] == coorPayload[0] && coorRobot[1] == coorPayload[1]) {
-        shiftCount = !shiftCount;
+        shiftToggle = !shiftToggle;
       }
     }
-    if (shiftCount == false) {
+    if (shiftToggle == false) {
       if (keyCode == RIGHT) {
         coorPayload[0] += 50;
       } else if (keyCode == LEFT) {
@@ -83,7 +83,7 @@ void keyPressed() {
     }
   }
   print(coorRobot[0], coorRobot[1], coorPayload[0], coorPayload[1], "\n");
-  print("\n shiftCount = ", shiftCount, "\n");
+  print("\n shiftToggle = ", shiftToggle, "\n");
 }
 
 void drawGrid() {
